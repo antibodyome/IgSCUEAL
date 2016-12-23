@@ -21,8 +21,8 @@ while getopts ":i:o:r:p:" opt; do
 done
 
 mpirun -np $numproc /usr/local/bin/HYPHYMPI scripts/screen_fasta.bf <<END
-$infile
-$outfile
-$altfile
+$(pwd)/$infile
+$(pwd)/$outfile
+$(pwd)/$altfile
 
 END
